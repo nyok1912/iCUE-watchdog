@@ -205,6 +205,18 @@ La tarea programada lanza el script automáticamente en dos situaciones:
 
 ## Instalación
 
+### Opción 0 — One-liner (PowerShell)
+
+```powershell
+irm https://raw.githubusercontent.com/nyok1912/iCUE-watchdog/main/web-install.ps1 | iex
+```
+
+Descarga la última versión desde GitHub y abre el menú interactivo directamente en
+tu terminal. Desde ahí eliges instalar, restaurar o desinstalar. La elevación UAC
+se solicita automáticamente si hace falta.
+
+---
+
 ### Opción A — Todo en uno (recomendado)
 
 Descarga `iCUE-Watchdog.cmd` de la sección [Releases] y ejecútalo con doble clic.
