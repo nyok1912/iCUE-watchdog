@@ -195,6 +195,17 @@ The scheduled task fires automatically in two situations:
 
 ## Installation
 
+### Option 0 — One-liner (PowerShell)
+
+```powershell
+irm https://raw.githubusercontent.com/nyok1912/iCUE-watchdog/main/web-install.ps1 | iex
+```
+
+Downloads the latest release from GitHub and runs the installer. UAC will prompt for
+confirmation. No administrator shell required to start.
+
+---
+
 ### Option A — All-in-one (recommended)
 
 Download `iCUE-Watchdog.cmd` from the [Releases] section and double-click it. A menu
