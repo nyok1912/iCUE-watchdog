@@ -201,8 +201,9 @@ The scheduled task fires automatically in two situations:
 irm https://raw.githubusercontent.com/nyok1912/iCUE-watchdog/main/web-install.ps1 | iex
 ```
 
-Downloads the latest release from GitHub and runs the installer. UAC will prompt for
-confirmation. No administrator shell required to start.
+Downloads the latest release from GitHub and opens the interactive menu directly in
+your terminal. Choose install, restore, or uninstall from there. UAC elevation is
+requested automatically when needed.
 
 ---
 
