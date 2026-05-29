@@ -37,6 +37,18 @@ Esto ocurre de forma reproducible:
 
 ---
 
+> **Una reflexión personal:** hay cierta ironía amarga en que hardware de gama alta
+> diseñado para integrarse completamente con iCUE falle de forma silenciosa y periódica
+> en algo tan habitual como encender el monitor. Corsair lleva años con este problema
+> y la respuesta ha sido parches incompletos o directamente silencio. Cuando decides
+> construir un sistema entero con controladores de ventiladores, hub, refrigeración
+> líquida y RAM del mismo fabricante —precisamente para tener una integración total y
+> centralizada— lo mínimo que puedes esperar es que esa integración funcione sin
+> tener que instalar herramientas de terceros para mantenerla en pie. En ese aspecto,
+> Corsair ha fallado a sus clientes, y está muy mal.
+
+---
+
 ## Por qué ocurre
 
 iCUE 5 está dividido en dos capas que se comunican entre sí mediante IPC
@@ -267,6 +279,20 @@ Restore.cmd --force
 - PowerShell 5.1 (incluido en Windows por defecto)
 - iCUE 5 instalado en la ruta estándar
 - Los periféricos Corsair deben estar conectados vía USB
+
+---
+
+## ⚠️ Limitación conocida: Escritorio Remoto (RDP)
+
+Si te conectas al equipo mediante Escritorio Remoto, iCUE pierde la sesión interactiva
+del usuario de la consola física y **no detecta los dispositivos** mientras hay una
+sesión RDP activa. iCUE Watchdog no puede resolver esto porque el problema no es un
+fallo de IPC, sino que iCUE directamente no tiene acceso al contexto de sesión
+necesario para hablar con el hardware.
+
+He probado varias aproximaciones sin éxito. Si alguien ha encontrado la forma de hacer
+que iCUE detecte los dispositivos durante una sesión RDP, cualquier aportación es
+bienvenida en los [Issues del repositorio](https://github.com/nyok1912/iCUE-watchdog/issues).
 
 ---
 
