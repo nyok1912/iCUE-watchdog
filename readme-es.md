@@ -44,7 +44,7 @@ Esto ocurre de forma reproducible:
 > construir un sistema entero con controladores de ventiladores, hub, refrigeración
 > líquida y RAM del mismo fabricante —precisamente para tener una integración total y
 > centralizada— lo mínimo que puedes esperar es que esa integración funcione sin
-> tener que instalar herramientas de terceros para mantenerla en pie. En ese aspecto,
+> tener que inventar herramientas "apaño" para mantenerla en pie. En ese aspecto,
 > Corsair ha fallado a sus clientes, y está muy mal.
 
 ---
