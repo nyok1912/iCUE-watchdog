@@ -35,6 +35,18 @@ This happens reproducibly:
 
 ---
 
+> **A personal note:** there is a certain bitter irony in high-end hardware explicitly
+> designed for full iCUE integration failing silently and repeatedly at something as
+> routine as turning your monitor back on. Corsair has been aware of this bug for years
+> and the response has been incomplete patches or outright silence. When you deliberately
+> build an entire system — fan controllers, hub, liquid cooling, RAM — from the same
+> manufacturer precisely to get centralised, integrated control, the very least you
+> should expect is that the integration actually works without having to install
+> third-party workarounds just to keep it running. In that regard, Corsair has let
+> its customers down, and that is simply not good enough.
+
+---
+
 ## Why it happens
 
 iCUE 5 is split into two layers that communicate with each other via IPC
@@ -255,6 +267,19 @@ Restore.cmd --force
 - PowerShell 5.1 (included with Windows)
 - iCUE 5 installed in the standard location
 - Corsair devices connected via USB
+
+---
+
+## ⚠️ Known limitation: Remote Desktop (RDP)
+
+If you connect to the machine via Remote Desktop, iCUE loses the interactive session
+of the physical console user and **does not detect devices** for the duration of the
+RDP session. iCUE Watchdog cannot fix this — it is not an IPC failure; iCUE simply
+has no access to the session context it needs to talk to the hardware.
+
+I have tried several approaches without success. If anyone has found a way to make
+iCUE detect devices during an active RDP session, any input is welcome in the
+[repository Issues](https://github.com/nyok1912/iCUE-watchdog/issues).
 
 ---
 
